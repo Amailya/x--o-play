@@ -1,7 +1,7 @@
 body {
     color: #ffffff;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #84fab0, #8fd3f4, #f6d365, #fda085);
     background-size: 400% 400%;
     animation: gradientAnimation 15s linear infinite;
     min-height: 100vh;
@@ -16,7 +16,7 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* --- ԱՊԱԿՅԱ ԿՈՆՏԵՅՆԵՐ --- */
+
 .container {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -26,7 +26,7 @@ body {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
-/* --- ՏԵՔՍՏԱՅԻՆ ԷԼԵՄԵՆՏՆԵՐ --- */
+
 .title {
     font-size: 36px;
     margin-bottom: 15px;
@@ -41,7 +41,7 @@ body {
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* --- ԽԱՂԱՏԱԽՏԱԿ ԵՎ ՎԱՆԴԱԿՆԵՐ --- */
+
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
@@ -64,13 +64,13 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover էֆեկտ, առանց գույնի փոփոխության */
+
 .cell:hover:not(.x):not(.o) {
     background: rgba(255, 255, 255, 0.3);
     transform: scale(1.05);
 }
 
-/* X և O հատուկ գույներ */
+
 .cell.x {
     color: #ffdde1;
 }
@@ -79,14 +79,13 @@ body {
     color: #a2d2ff;
 }
 
-/* Հաղթող վանդակներ */
 .cell.win {
     background: rgba(255, 255, 255, 0.8);
     color: #23a6d5;
     box-shadow: 0 0 20px #a2d2ff;
 }
 
-/* --- ԿՈՃԱԿՆԵՐ (start/stop) --- */
+
 button {
     border: 1px solid rgba(255, 255, 255, 0.5);
     background: rgba(255, 255, 255, 0.15); 
@@ -104,7 +103,3 @@ button:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: scale(1.05);
 }
-
-/* Եթե ուզում ես նոր գույներ ավելացնել X և O-ի համար */
-.cell.x2 { color: #FFD700; } /* Օրինակ՝ ոսկեգույն X */
-.cell.o2 { color: #7CFC00; } /* Օրինակ՝ կանաչ O */
