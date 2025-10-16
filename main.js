@@ -1,15 +1,13 @@
-// --- DOM ՏԱՐՐԵՐԻ ՍՏԱՑՈՒՄ ---
+
 const boardEl = document.getElementById("board");
 const statusEl = document.getElementById("status");
 const restartBtn = document.getElementById("restart");
-
-// 👇 Ավելացվել է կանգնեցնելու կոճակի տողը
 const stopButton = document.getElementById("stopButton");
 
 const player_O = "O";
 const player_x = "X";
 
-// --- ԽԱՂԻ ՎԻՃԱԿԻ ՓՈՓՈԽԱԿԱՆՆԵՐ ---
+
 let board;
 let currentPlayer;
 let isGameActive;
@@ -20,12 +18,12 @@ const winCombos = [
   [0, 4, 8], [2, 4, 6]
 ];
 
-// --- ՍԿՍԵԼ ԽԱՂԸ ---
+
 function startGame() {
   board = Array(9).fill('');
   currentPlayer = 'X';
   isGameActive = true;
-  boardEl.style.pointerEvents = "auto"; // 👈 եթե կանգնած էր, նորից միացնի
+
   boardEl.innerHTML = '';
 
   for (let i = 0; i < 9; i++) {
@@ -112,11 +110,8 @@ function findBestMove() {
   return -1;
 }
 
-
-restartBtn.addEventListener('click', startGame);
-
 stopButton.addEventListener('click', () => {
-  isGameActive = false;
+   isGameActive = false;
 });
-
+restartBtn.addEventListener('click', startGame);
 startGame(); 
