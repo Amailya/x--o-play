@@ -1,6 +1,93 @@
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Հիմնական վերնագիր */
+h1 {
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Խաղի բլոկ */
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 10px;
+}
+
+/* Բջիջների տեսք */
+.cell {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Hover էֆեկտ բջիջների համար */
+.cell:hover {
+    transform: scale(1.1);
+    background-color: #f0f8ff;
+}
+
+/* X և O գույներ */
+.cell.x {
+    color: #ff4d4d;
+}
+
+.cell.o {
+    color: #4d79ff;
+}
+
+/* Հաղթող բջիջների animation */
+.cell.win {
+    animation: highlight 1s ease-in-out infinite alternate;
+}
+
+@keyframes highlight {
+    0% { background-color: #ffeb3b; }
+    100% { background-color: #ffc107; }
+}
+
+/* Խաղի status տեքստ */
+#status {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Start / Restart կոճակ */
+#restart {
+    margin-top: 20px;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    background: #ff6a00;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#restart:hover {
+    transform: scale(1.05);
+    background: #ff8c42;
 }
