@@ -110,8 +110,9 @@ function findBestMove() {
   return -1;
 }
 
-stopButton.addEventListener('click', () => {
-   isGameActive = false;
-});
+ stopButton.addEventListener('click', () => {
+    isGameActive = false;
+ });
+
 restartBtn.addEventListener('click', startGame);
 startGame(); 
